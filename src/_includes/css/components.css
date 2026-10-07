@@ -1,0 +1,400 @@
+/* Navigation ------------------------------------------------------------- */
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.75rem;
+}
+
+.site-nav .page-link {
+  font-size: 1.05rem;
+  color: var(--color-text);
+  padding: 0.1rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.site-nav .page-link:hover {
+  color: var(--color-text);
+  background-color: var(--color-background);
+  border-color: var(--color-border);
+  text-decoration: none;
+}
+
+.site-nav .page-link-current {
+  color: var(--color-background);
+  background-color: var(--color-text);
+}
+
+.site-nav .page-link-current:hover {
+  color: var(--color-background);
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+/* Footer ----------------------------------------------------------------- */
+
+.site-footer {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-border);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.footer-line {
+  margin: 0;
+  text-align: center;
+}
+
+/* Theme toggle ----------------------------------------------------------- */
+
+.theme-toggle {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.35rem 0.5rem;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: background-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-background);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+}
+
+[data-theme="dark"] .sun-icon {
+  display: none;
+}
+
+[data-theme="dark"] .moon-icon {
+  display: block !important;
+}
+
+[data-theme="light"] .sun-icon {
+  display: block;
+}
+
+[data-theme="light"] .moon-icon {
+  display: none;
+}
+
+/* Home page header ------------------------------------------------------- */
+
+.profile {
+  overflow: hidden;
+}
+
+.profile-photo {
+  float: right;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  margin: 0 0 var(--spacing-sm) var(--spacing-md);
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 1.9rem;
+  color: var(--color-heading);
+}
+
+.profile-subtitle {
+  font-family: var(--font-family-mono);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.profile-bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* Highlighted banner (optional) ------------------------------------------ */
+
+.announcement {
+  background-color: var(--color-accent-soft);
+  border: 2px solid var(--color-heading);
+  border-radius: var(--radius);
+  padding: 0.6rem 1rem;
+  margin: var(--spacing-md) 0;
+}
+
+/* Social links ----------------------------------------------------------- */
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin: var(--spacing-sm) 0 var(--spacing-md);
+}
+
+.social-elem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.social-elem a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.15rem;
+  color: var(--color-heading);
+}
+
+.social-elem a:hover {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.social-label {
+  font-family: var(--font-family-mono);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* Research interests ----------------------------------------------------- */
+
+.interest-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0 0 var(--spacing-sm);
+  padding: 0;
+}
+
+.interest-list li {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.1rem 0.75rem;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Research entries ------------------------------------------------------- */
+
+.research-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+}
+
+.research-item {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: flex-start;
+}
+
+.research-thumb {
+  flex: none;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+}
+
+.research-body {
+  min-width: 0;
+}
+
+.research-title {
+  margin: 0 0 0.15rem;
+  font-size: 1.15rem;
+}
+
+.research-authors {
+  font-size: 0.92rem;
+  margin-bottom: 0.15rem;
+}
+
+.research-venue {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+.research-note {
+  color: var(--color-heading);
+}
+
+.research-summary {
+  font-size: 0.95rem;
+  margin: 0.35rem 0 0;
+}
+
+.research-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0 0;
+}
+
+.link-badge {
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  border: 1px solid var(--color-link);
+  border-radius: 8px;
+  padding: 0.1rem 0.5rem;
+  color: var(--color-link);
+}
+
+.link-badge:hover {
+  background-color: var(--color-link);
+  color: var(--color-background);
+  text-decoration: none;
+}
+
+.research-abstract {
+  margin-top: 0.6rem;
+}
+
+.research-abstract summary {
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--color-heading);
+  border-radius: 8px;
+  color: var(--color-heading);
+  padding: 0.1rem 0.55rem;
+  list-style: none;
+}
+
+.research-abstract summary::-webkit-details-marker {
+  display: none;
+}
+
+.research-abstract summary:hover,
+.research-abstract[open] summary {
+  background-color: var(--color-heading);
+  color: var(--color-background);
+}
+
+.research-abstract > p {
+  background-color: var(--color-surface);
+  border-radius: 0 0 10px 10px;
+  font-size: 0.95rem;
+  margin: 0.4rem 0 0;
+  padding: 0.75rem 1rem;
+}
+
+.research-abstract > p:last-child {
+  margin-bottom: 0;
+}
+
+/* Teaching --------------------------------------------------------------- */
+
+.role-item {
+  margin-bottom: var(--spacing-md);
+}
+
+.role-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.role-name {
+  font-weight: 600;
+}
+
+.role-institution {
+  color: var(--color-text);
+}
+
+.role-period {
+  font-family: var(--font-family-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.course-list {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0;
+}
+
+.course-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  padding: 0.2rem 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.course-professor {
+  color: var(--color-text-muted);
+}
+
+.course-term {
+  font-family: var(--font-family-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* Small screens ---------------------------------------------------------- */
+
+@media (max-width: 620px) {
+  .profile-photo {
+    float: none;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto var(--spacing-sm);
+  }
+
+  .profile {
+    text-align: center;
+  }
+
+  .profile-bio {
+    text-align: left;
+  }
+
+  .news-item {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .news-date {
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .research-item {
+    flex-direction: column;
+  }
+
+  .research-thumb {
+    width: 72px;
+    height: 72px;
+  }
+
+  .course-item {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

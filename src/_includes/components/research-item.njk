@@ -1,0 +1,45 @@
+{% macro researchItem(item, level) %}
+<article class="research-item">
+  {%- if item.image %}
+  <img
+    class="research-thumb"
+    src="{{ item.image }}"
+    alt=""
+    width="96"
+    height="96"
+    loading="lazy"
+    decoding="async"
+  />
+  {%- endif %}
+  <div class="research-body">
+    {%- if level == "h3" %}
+    <h3 class="research-title">{{ item.title }}</h3>
+    {%- else %}
+    <h2 class="research-title">{{ item.title }}</h2>
+    {%- endif %} {%- if item.authors %}
+    <p class="research-authors">{{ item.authors | md | safe }}</p>
+    {%- endif %}
+    <p class="research-venue">
+      {{ item.prevenue | default("In") }} <em>{{ item.venue }}</em>, {{
+      item.year }}.{% if item.note %}
+      <span class="research-note">{{ item.note }}.</span>{% endif %}
+    </p>
+    {%- if item.summary %}
+    <p class="research-summary">{{ item.summary | md | safe }}</p>
+    {%- endif %} {%- if item.abstract %}
+    <details class="research-abstract">
+      <summary>Abstract</summary>
+      {{ item.abstract | mdBlock | safe }}
+    </details>
+    {%- endif %} {%- if item.links and item.links.length %}
+    <p class="research-links">
+      {%- for link in item.links %}
+      <a class="link-badge" href="{{ link.href }}" target="_blank" rel="noopener"
+        >{{ link.label }}</a
+      >
+      {%- endfor %}
+    </p>
+    {%- endif %}
+  </div>
+</article>
+{% endmacro %}

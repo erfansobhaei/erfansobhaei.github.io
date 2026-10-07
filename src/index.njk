@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+---
+
+{% from "components/research-item.njk" import researchItem %}
+
+<div class="home">
+  <div class="profile">
+    <img
+      class="profile-photo"
+      src="{{ site.photo }}"
+      alt="{{ site.photoAlt }}"
+      width="200"
+      height="200"
+    />
+    <h1 class="profile-name">{{ site.name }}</h1>
+    <p class="profile-subtitle">{{ site.subtitle }}</p>
+    <div class="profile-bio">
+      {%- for paragraph in site.bio %}
+      <p>{{ paragraph | md | safe }}</p>
+      {%- endfor %}
+    </div>
+  </div>
+
+  {% if site.announcement %}
+  <p class="announcement">{{ site.announcement | md | safe }}</p>
+  {% endif %} {% include "components/social-links.njk" %} {% if
+  site.researchInterests.length %}
+  <h2>Research Interests</h2>
+  <ul class="interest-list">
+    {%- for interest in site.researchInterests %}
+    <li>{{ interest }}</li>
+    {%- endfor %}
+  </ul>
+  {% endif %} {% if research.length %} {% set recentResearch = research |
+  sortBy("year") %}
+  <h2>Recent Research</h2>
+  <div class="research-list">
+    {%- for item in recentResearch | limit(3) %} {{ researchItem(item, "h3")
+    }} {%- endfor %}
+  </div>
+  <p class="more-link">
+    <a href="/research/">All research &amp; publications &rarr;</a>
+  </p>
+  {% endif %}
+</div>

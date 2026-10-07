@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Reliance on spurious features fading as implicit regularization grows">
+  <!-- Shared palette: #2B2622 ink, #5C544A dark, #968C7E mid, #CEC4B2 light, #F2ECE2 bone -->
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="46%" r="72%">
+      <stop offset="55%" stop-color="#241f1b" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#241f1b" stop-opacity="0.30"/>
+    </radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.55"/></feComponentTransfer>
+    </filter>
+    <linearGradient id="heat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2B2622"/>
+      <stop offset="0.55" stop-color="#5C544A"/>
+      <stop offset="1" stop-color="#CEC4B2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="200" height="200" fill="#CEC4B2"/>
+
+  <!-- a "heatmap" field: reliance on the shortcut -->
+  <rect x="26" y="30" width="148" height="140" rx="14" fill="url(#heat)" opacity="0.92"/>
+
+  <!-- grid lines hinting at the measured surface -->
+  <g stroke="#F2ECE2" stroke-width="1.4" opacity="0.35">
+    <path d="M63 30 V170 M100 30 V170 M137 30 V170"/>
+    <path d="M26 65 H174 M26 100 H174 M26 135 H174"/>
+  </g>
+
+  <!-- the reliance falling away -->
+  <path d="M40 58 C 70 84, 108 116, 162 150" fill="none" stroke="#F2ECE2"
+        stroke-width="5.5" stroke-linecap="round" stroke-dasharray="10 8"/>
+  <circle cx="40" cy="58" r="8" fill="#F2ECE2"/>
+  <circle cx="162" cy="150" r="8" fill="#F2ECE2" opacity="0.6"/>
+
+  <rect width="200" height="200" fill="url(#vig)"/>
+  <rect width="200" height="200" fill="#2B2622" filter="url(#grain)" opacity="0.22"/>
+</svg>

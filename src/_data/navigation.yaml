@@ -1,0 +1,8 @@
+# Top navigation bar. Reorder or remove entries freely.
+# The CV link is appended automatically from `cvUrl` in site.yaml, so it is not
+# listed here — edit site.yaml to change the CV.
+items:
+  - text: "Home"
+    href: "/"
+  - text: "Research"
+    href: "/research/"

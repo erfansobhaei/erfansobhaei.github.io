@@ -1,0 +1,45 @@
+/* Colours, fonts and spacing for the whole site.
+   Change the values here to re-theme everything at once. */
+
+:root {
+  /* Colours — light mode */
+  --color-text: #1a1f24;
+  --color-text-muted: #5b6470;
+  --color-heading: #b3740b;
+  --color-background: #ffffff;
+  --color-surface: #f6f3ee;
+  --color-surface-strong: #ece7df;
+  --color-border: #e6e4e0;
+  --color-link: #0087a8;
+  --color-link-hover: #1a1f24;
+  --color-accent-soft: #fceed5;
+
+  /* Typography */
+  --font-family-base: "Alegreya", Georgia, "Times New Roman", serif;
+  --font-family-mono: "Ubuntu Mono", ui-monospace, SFMono-Regular, Menlo,
+    monospace;
+  --font-size-base: 1.0625rem;
+  --line-height-base: 1.6;
+
+  /* Layout */
+  --max-width: 820px;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --radius: 10px;
+}
+
+/* Colours — dark mode (toggled by the button in the navigation bar). */
+[data-theme="dark"] {
+  --color-text: #e6e3de;
+  --color-text-muted: #a3a8b0;
+  --color-heading: #e0a53c;
+  --color-background: #14181d;
+  --color-surface: #1c2229;
+  --color-surface-strong: #232b34;
+  --color-border: #2f3944;
+  --color-link: #5cc8e8;
+  --color-link-hover: #ffffff;
+  --color-accent-soft: #2b2417;
+}

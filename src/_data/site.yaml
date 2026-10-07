@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# This file holds the details that appear all over the site.
+# Edit it once and the change shows up on every page.
+# ---------------------------------------------------------------------------
+
+title: "Erfan Sobhaei" # browser tab / RSS title
+author: "Erfan Sobhaei"
+name: "Erfan Sobhaei"
+subtitle: "M.Sc. in Computer Science · Sharif University of Technology"
+description: "Personal website of Erfan Sobhaei — deep learning theory, generalization, and robustness."
+url: "https://erfansobhaei.github.io" # no trailing slash
+email: "e.sobhaei@gmail.com"
+scholar: "https://scholar.google.com/citations?user=LvFmNh4AAAAJ&hl=en"
+
+# Home page profile picture (drop a new file in src/assets/images/ and point here).
+photo: "/assets/images/profile.jpg"
+photoAlt: "Portrait of Erfan Sobhaei"
+
+# CV PDF. This is the single source of truth for the CV: the navigation bar and
+# the footer both link to it.
+cvUrl: "/assets/files/ErfanSobhaei_CV.pdf"
+
+# Shown in the footer as "Last updated <this>".
+# Leave empty ("") to omit that part of the footer.
+lastUpdated: "September 29, 2026"
+
+# Optional highlighted banner at the top of the home page.
+# Leave empty ("") to hide it. Markdown links are supported.
+announcement: ""
+
+# Bio paragraphs on the home page. Markdown is supported.
+bio:
+  - >-
+    I am a graduate of the M.Sc. program in Computer Science at
+    [Sharif University of Technology](https://sharif.edu/), where I studied theory of deep learning 
+    and worked as a research assistant in the Robust and
+    Interpretable Machine Learning (RIML) Lab.
+  - >-
+    I study the theory of deep learning: why heavily overparameterized networks
+    generalize, how implicit regularization shapes the solutions they find, and
+    what these phenomena imply for robustness and representation learning.
+  - >-
+
+# Research interests shown on the home page.
+researchInterests:
+  - "Theory of Deep Learning"
+  - "High-Dimensional Statistics"
+  - "Generalization and Robustness"
+  - "Representation Learning"
+
+# Contact links. `icon` uses Font Awesome 6 / Academicons class names.
+# Remove an entry to remove the icon.
+social:
+  - label: "Email"
+    icon: "fa-solid fa-envelope"
+    href: "mailto:e.sobhaei@gmail.com"
+    address: "e.sobhaei@gmail.com"
+  - label: "Google Scholar"
+    icon: "ai ai-google-scholar"
+    href: "https://scholar.google.com/citations?user=LvFmNh4AAAAJ&hl=en"
+  - label: "GitHub"
+    icon: "fa-brands fa-github"
+    href: "https://github.com/erfansobhaei"
+  - label: "LinkedIn"
+    icon: "fa-brands fa-linkedin"
+    href: "https://www.linkedin.com/in/erfansobhaei"

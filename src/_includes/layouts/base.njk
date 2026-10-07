@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{% if title and title != site.title %}{{ title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ description or site.description }}" />
+    <meta name="author" content="{{ site.author }}" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="{% if tags %}article{% else %}website{% endif %}" />
+    <meta property="og:title" content="{% if title and title != site.title %}{{ title }} | {% endif %}{{ site.title }}" />
+    <meta property="og:description" content="{{ description or site.description }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:locale" content="en_US" />
+    {% if image %}
+    <meta property="og:image" content="{{ site.url }}{{ image }}" />
+    <meta property="og:image:alt" content="{{ imageAlt or title or site.title }}" />
+    {% endif %}
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{% if title and title != site.title %}{{ title }} | {% endif %}{{ site.title }}" />
+    <meta name="twitter:description" content="{{ description or site.description }}" />
+    {% if image %}
+    <meta name="twitter:image" content="{{ site.url }}{{ image }}" />
+    <meta name="twitter:image:alt" content="{{ imageAlt or title or site.title }}" />
+    {% endif %}
+
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS Feed" href="{{ site.url }}/feed.xml" />
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+    <link rel="icon" href="/assets/images/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+    <link rel="alternate icon" href="/assets/images/favicon.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="/assets/images/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css"
+    />
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <script>
+      // Apply the saved colour theme before first paint to avoid a flash.
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme-preference");
+          var theme =
+            stored ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light");
+          document.documentElement.dataset.theme = theme;
+        } catch (error) {
+          // Ignore storage failures (private browsing, etc.).
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    {% include "components/skip-link.njk" %}
+
+    <header class="site-header">
+      <div class="container">
+        {% include "components/header.njk" %}
+      </div>
+    </header>
+
+    <div class="container page-content">
+      <main id="main">{{ content | safe }}</main>
+
+      {% include "components/footer.njk" %}
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

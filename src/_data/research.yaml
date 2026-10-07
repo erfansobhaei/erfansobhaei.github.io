@@ -1,0 +1,65 @@
+# Research outputs. The site sorts this list by `year`, newest first, so you can
+# paste a new entry anywhere — order in this file does not matter.
+#
+# Fields:
+#   title    - shown in bold; also the entry heading
+#   authors  - author list; Markdown works, so bold your own name
+#   venue    - short venue, e.g. ICLR, NeurIPS, or the institution for a thesis
+#   prevenue - optional prefix before the venue; defaults to "In". Set it to ""
+#              for entries like a thesis, which read better without "In".
+#   year     - calendar year, used for sorting
+#   note     - optional, e.g. "Poster", "Spotlight presentation"
+#   image    - thumbnail ("avatar") under src/assets/images/research/.
+#              Edit the SVG cartoons in scripts/cartoons/, or generate a
+#              treated raster thumbnail with scripts/make_figures.py.
+#   summary  - one or two sentences shown in the list
+#   abstract - optional longer text, hidden behind an "Abstract" toggle
+#   links    - optional badges; delete the line or leave [] to hide them
+#
+# The abstract texts below are placeholders written from the titles — replace
+# them with the real abstracts when you have them.
+- title: "Overparameterization, Neural Collapse, and Their Role in Bias-Variance Alignment"
+  authors: "E. Sobhaei"
+  venue: "M.Sc. thesis, Sharif University of Technology"
+  prevenue: ""
+  year: 2026
+  image: "/assets/images/research/thesis.svg"
+  abstract: >-
+    Classical learning theory predicts that models with more parameters than
+    data points should overfit, yet deep networks routinely do the opposite.
+    This thesis studies that gap through neural collapse, the tendency of
+    last-layer features to converge on a simplex equiangular tight frame, and
+    asks how collapse relates to the alignment of bias and variance as width
+    and training time grow.
+  links: []
+  
+- title: "Implicit Regularization of SGD Reduces Shortcut Learning"
+  authors: >-
+    N. Mirzaie, A. Alipanah, A. Abbasi, A. Farzane, H. Jafarinia,
+    **E. Sobhaei**, M. Ghaznavi, A. Najafi, M. Soleymani Baghshah, M. H. Rohban
+  venue: "ICLR"
+  year: 2026
+  image: "/assets/images/research/shortcut-learning.svg"
+  abstract: >-
+    Models take shortcuts when they rely on features that correlate with the
+    label on the training distribution without reflecting the underlying task.
+    This work studies the implicit regularization induced by stochastic
+    gradient descent, its preference for simple low-norm solutions, and the
+    extent to which that preference suppresses shortcut features.
+  links: []
+
+- title: "The Silent Helper: How Implicit Regularization Enhances Group Robustness"
+  authors: >-
+    N. Mirzaie, M. Ghaznavi, H. Oyarhoseini, A. Alipanah, **E. Sobhaei**,
+    A. Abbasi, A. Farzane, H. Jafarinia, P. Sharifi Sedeh, A. Boushehrian,
+    M. Soleymani Baghshah, M. Rohban
+  venue: "HiLD at ICML"
+  year: 2025
+  note: "Poster"
+  image: "/assets/images/research/silent-helper.svg"
+  abstract: >-
+    Group robustness methods usually add an explicit penalty, a reweighting
+    scheme, or a two-stage training procedure. This work studies how much can
+    be gained for free from the implicit regularization of ordinary training,
+    and how that effect interacts with explicit robustness interventions.
+  links: []

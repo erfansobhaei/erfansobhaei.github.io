@@ -1,0 +1,14 @@
+<div class="social-links">
+  {%- for link in site.social %}
+  <span class="social-elem">
+    <a
+      href="{{ link.href }}"
+      aria-label="{{ link.label }}"
+      title="{{ link.label }}"
+      {%- if not link.href.startsWith("mailto:") %} target="_blank" rel="noopener"{% endif %}
+      ><i class="{{ link.icon }}" aria-hidden="true"></i>
+      <span class="social-label">{{ link.address or link.label }}</span></a
+    >
+  </span>
+  {%- endfor %}
+</div>

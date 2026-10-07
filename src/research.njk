@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+title: Research
+permalink: /research/
+---
+
+{% from "components/research-item.njk" import researchItem %}
+
+<h1>Research &amp; Publications</h1>
+
+<p class="lead">
+  Papers, posters, and projects, newest first. My full profile is also on
+  <a href="{{ site.scholar }}" target="_blank" rel="noopener">Google Scholar</a>.
+</p>
+
+<div class="research-list">
+  {%- for item in research | sortBy("year") %} {{ researchItem(item, "h2") }} {%-
+  endfor %}
+</div>
