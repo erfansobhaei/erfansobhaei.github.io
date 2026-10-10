@@ -48,6 +48,15 @@
   text-align: center;
 }
 
+.visit-counter-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: var(--spacing-lg);
+}
+
 /* Theme toggle ----------------------------------------------------------- */
 
 .theme-toggle {
